@@ -12,7 +12,6 @@ public interface TheirsToOursMapper {
     @Mappings({
             @Mapping(target = "fullName", expression = "java(source.getName() + \" \" + source.getSurname())"),
             @Mapping(target = "heightInFeet", expression = "java(source.getHeightInCm() / 30.48)"),
-            @Mapping(target = "weight", source = "weight"),
             @Mapping(target = "sex", source = "sex")
     })
     OursDto theirsToOurs(TheirsDto source);
